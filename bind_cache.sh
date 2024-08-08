@@ -16,7 +16,7 @@ function bind_cache() {
   fi
 }
 
-bind_cache ~/.cache _cache
+# bind_cache ~/.cache _cache
 bind_cache ~/.config/coc _config_coc
-bind_cache ~/.config/nvim/tmp _config_nvim_tmp
+# bind_cache ~/.config/nvim/tmp _config_nvim_tmp
 bind_cache ~/.config/github-copilot _config_github-copilot
