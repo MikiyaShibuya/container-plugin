@@ -8,3 +8,4 @@ su $USER -c "git checkout dev"
 
 chsh $USER -s /bin/zsh
 
+su $USER -c "echo '/tmp/container-plugin/bind_cache.sh' >> /home/$USER/.zshrc"
