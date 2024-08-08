@@ -7,7 +7,7 @@ function bind_cache() {
     if [ -e ${DIR} ]; then
       mv ${DIR} ${DIR}_org
       if [ ! -e ~/host-cachedir/${DIR} ]; then
-        cp -r ${DIR}_org ~/host-cachedir/$MOUNT
+        cp -rf ${DIR}_org ~/host-cachedir/$MOUNT
       fi
     fi
 
