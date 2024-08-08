@@ -4,14 +4,16 @@ function bind_cache() {
   DIR=$1
   MOUNT=$2
   if [ ! -h ${DIR} ]; then
-    mv ${DIR} ${DIR}_org
-    if [ ! -e ~/host-cachedir/${DIR} ]; then
-      cp -r ${DIR}_org ~/host-cachedir/$MOUNT
+    if [ -e ${DIR} ]; then
+      mv ${DIR} ${DIR}_org
+      if [ ! -e ~/host-cachedir/${DIR} ]; then
+        cp -r ${DIR}_org ~/host-cachedir/$MOUNT
+      fi
     fi
+
     mkdir -p ~/host-cachedir/$MOUNT
     ln -s ~/host-cachedir/$MOUNT ${DIR}
   fi
-
 }
 
 bind_cache ~/.cache _cache
