@@ -5,3 +5,6 @@ cd /tmp/dotfiles
 su $USER -c "git checkout dev"
 
 ./install.sh
+
+chsh $USER -s /bin/zsh
+
