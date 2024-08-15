@@ -2,7 +2,7 @@
 
 su $USER -c "git clone https://github.com/MikiyaShibuya/dotfiles.git /tmp/dotfiles"
 cd /tmp/dotfiles
-su $USER -c "git checkout dev"
+su $USER -c "git checkout lua"
 
 ./install.sh
 
