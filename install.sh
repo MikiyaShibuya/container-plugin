@@ -1,10 +1,13 @@
 #!/bin/bash
 
-su $USER -c "git clone https://github.com/MikiyaShibuya/dotfiles.git /tmp/dotfiles"
-cd /tmp/dotfiles
-su $USER -c "git checkout b7437e8"
+HOMEDIR=$(eval echo ~$USER)
+REPO_URL=https://github.com/MikiyaShibuya/dotfiles.git
+su $USER -c "mkdir -p $HOMEDIR/.local/share"
+su $USER -c "git clone $REPO_URL --depth=1 $HOMEDIR/.local/share/dotfiles"
+cd $HOMEDIR/.local/share/dotfiles
+su $USER -c "git checkout 594fe71"
 
-./install.sh
+USER=$USER ./install.sh
 
 chsh $USER -s /bin/zsh
 
