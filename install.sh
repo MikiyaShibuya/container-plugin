@@ -5,7 +5,7 @@ REPO_URL=https://github.com/MikiyaShibuya/dotfiles.git
 su $USER -c "mkdir -p $HOMEDIR/.local/share"
 su $USER -c "git clone $REPO_URL --depth=1 $HOMEDIR/.local/share/dotfiles"
 cd $HOMEDIR/.local/share/dotfiles
-su $USER -c "git checkout f41996d"
+su $USER -c "git checkout 4d6d902"
 
 USER=$USER ./install.sh
 
