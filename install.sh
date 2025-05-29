@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 HOMEDIR=$(eval echo ~$USER)
 REPO_URL=https://github.com/MikiyaShibuya/dotfiles.git
 su $USER -c "mkdir -p $HOMEDIR/.local/share"
