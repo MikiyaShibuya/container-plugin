@@ -5,9 +5,11 @@ set -e
 HOMEDIR=$(eval echo ~$USER)
 REPO_URL=https://github.com/MikiyaShibuya/dotfiles.git
 su $USER -c "mkdir -p $HOMEDIR/.local/share"
-su $USER -c "git clone $REPO_URL $HOMEDIR/.local/share/dotfiles"
+if [ ! -d "$HOMEDIR/.local/share/dotfiles" ]; then
+    su $USER -c "git clone $REPO_URL $HOMEDIR/.local/share/dotfiles"
+fi
 cd $HOMEDIR/.local/share/dotfiles
-su $USER -c "git checkout 069f336"
+su $USER -c "git checkout 39cc70c"
 
 USER=$USER ./install.sh
 
